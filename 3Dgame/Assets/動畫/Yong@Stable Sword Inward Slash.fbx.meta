@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Stable Sword Inward Slash
+    second: "\u9B54\u738B\u7B49\u5F85"
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Stable Sword Inward Slash
+      name: "\u9B54\u738B\u7B49\u5F85"
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
