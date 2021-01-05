@@ -709,6 +709,8 @@ MonoBehaviour:
   speed: 2
   stopDistance: 1.5
   cd: 4
+  atkPoint: {fileID: 1180005061}
+  atkLength: 1.14
 --- !u!195 &386500920
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -731,6 +733,12 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!4 &386500922 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6883adb884ca31f469db2fe357ee9d6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 499184528}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &389769083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,6 +1632,10 @@ PrefabInstance:
     - target: {fileID: 100200, guid: 37a08c641e66baf40a329e65fba212f6, type: 3}
       propertyPath: m_Name
       value: "\u5E25\u54E5\u54E5"
+      objectReference: {fileID: 0}
+    - target: {fileID: 100200, guid: 37a08c641e66baf40a329e65fba212f6, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400200, guid: 37a08c641e66baf40a329e65fba212f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6519,6 +6531,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1180005060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1180005061}
+  m_Layer: 0
+  m_Name: "\u653B\u64CA\u4E2D\u5FC3\u9EDE"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1180005061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180005060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.958, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 386500922}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1222636872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6721,6 +6763,18 @@ MonoBehaviour:
   groundMinDistance: 0.25
   groundMaxDistance: 0.5
   slopeLimit: 75
+--- !u!114 &1283536600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283536593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71908be223100f34ab197c3ee4efa90e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1311361879 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012284530990, guid: 927b358a489fa874780f1278268d7bfb,
