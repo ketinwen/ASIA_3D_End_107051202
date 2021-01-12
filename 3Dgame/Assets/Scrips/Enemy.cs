@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     public Transform atkPoint;
     [Header("攻擊長度"), Range(0f, 5f)]
     public float atkLength;
+    [Header("攻擊力"), Range(0, 500)]
+    public float atk = 30;
 
     private Transform player;
     private NavMeshAgent nav;
@@ -75,7 +77,7 @@ public class Enemy : MonoBehaviour
 
                 if (Physics.Raycast(atkPoint.position, atkPoint.forward,out hit, atkLength, 1 << 8))
                 {
-                    hit.collider.GetComponent<Player>().Damage();
+                    hit.collider.GetComponent<Player>().Damage(atk);
                 }
             }
         }
@@ -83,7 +85,24 @@ public class Enemy : MonoBehaviour
     /// <summary>
     /// 追蹤
     /// </summary>
-    private void Track()
+    private float hp = 100;
+
+    public void Damage(float damage)
+    {
+        hp -= damage;
+        ani.SetTrigger("受傷觸發");
+
+        if (hp <= 0) Dead();
+       
+    }
+    private void Dead()
+    {
+        nav.isStopped = true;
+        enabled = false;
+        ani.SetBool("死亡觸發",true);
+    }
+
+        private void Track()
     {
         nav.SetDestination(player.position);
 
